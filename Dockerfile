@@ -20,9 +20,6 @@ COPY --from=builder /src/openfortivpn/openfortivpn /usr/bin/
 
 RUN apk update && apk add ppp openssh-server openssh-client
 
-# Test tool
-RUN apk add curl bind-tools
-
 WORKDIR /
 COPY ./entrypoint.sh /entrypoint.sh
 
